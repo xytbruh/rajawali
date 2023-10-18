@@ -8,7 +8,6 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import toast from "react-hot-toast";
 
-
 const Summary = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -25,9 +24,9 @@ const Summary = () => {
     }
   }, [searchParams, removeAll]);
 
-  const totalPrice = items.reduce((total, item) => {
-    return total + Number(item.price);
-  }, 0);
+  // const totalPrice = items.reduce((total, item) => {
+  //   return total + Number(item.price);
+  // }, 0);
 
   const product = items.map((item) => {
     return item.name;
